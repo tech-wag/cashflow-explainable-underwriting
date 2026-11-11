@@ -6,6 +6,7 @@ authors:
     given-names: Athresh
     orcid: "https://orcid.org/0009-0000-4731-7425"
 license: MIT
+doi: "10.5281/zenodo.24126177"
 repository-code: "https://github.com/tech-wag/cashflow-explainable-underwriting"
 date-released: 2026-11-10
 keywords:

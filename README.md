@@ -1,5 +1,7 @@
 # Cash-Flow Explainable Underwriting (CFEU)
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24126177.svg)](https://doi.org/10.5281/zenodo.24126177)
+
 Reproducible code for the paper **"Does Cash-Flow Data See the Credit-Invisible? Evidence from Public Loan Data for an Explainable Underwriting Pipeline"** by Athresh Guruprakash (manuscript under preparation).
 
 The study tests whether alternative data (repayment behaviour outside the credit bureau, and bank-account cash flow) improves credit scoring for applicants with little or no credit history, and what it does to explanation quality and fairness. Everything runs on two public datasets with real repayment outcomes.
