@@ -1,0 +1,402 @@
+{
+ "explainability": {
+  "stability": {
+   "n_declined_explained": 5000,
+   "top1_agreement": 0.9310666666666667,
+   "top4_jaccard_mean": 0.8276444444444444
+  },
+  "faithfulness": {
+   "mean_pd_declined": 0.17742653082676102,
+   "mean_drop_top_reason": 0.08294761144407337,
+   "mean_drop_random_feature": 0.004236891869466177,
+   "share_flipped_to_approve_top_reason": 0.5564,
+   "share_flipped_to_approve_random_feature": 0.0422
+  },
+  "global_importance_top15": {
+   "bur_ext_source_2": 0.1437,
+   "bur_ext_source_3": 0.1211,
+   "bur_ext_source_1": 0.0806,
+   "alt_credit_to_goods": 0.0663,
+   "alt_employment_years": 0.0531,
+   "alt_inst_n": 0.0513,
+   "alt_cc_util_mean": 0.044,
+   "bur_debt_to_credit": 0.0434,
+   "alt_annuity_to_income": 0.041,
+   "alt_inst_late_share": 0.0306,
+   "alt_income_type": 0.0285,
+   "alt_prev_refused_share": 0.0282,
+   "bur_total_credit": 0.0247,
+   "alt_income": 0.0246,
+   "alt_credit_to_income": 0.0242
+  },
+  "share_of_importance_alternative": 0.49690000000000006,
+  "top_reasons_declined_all": {
+   "External credit score 2 is low": 0.1509,
+   "External credit score 3 is low": 0.1326,
+   "External credit score 1 is low": 0.1043,
+   "Loan amount relative to purchase price": 0.098,
+   "Length of employment": 0.0755,
+   "Number of past instalments": 0.069,
+   "Debt is high relative to credit": 0.0602,
+   "Repayment is high relative to income": 0.0579,
+   "Card balance is high relative to limit": 0.0494,
+   "Share of previous applications refused": 0.0443
+  },
+  "top_reasons_declined_thin_file": {
+   "External credit score 2 is low": 0.1687,
+   "External credit score 1 is low": 0.1372,
+   "Number of past instalments": 0.1145,
+   "Length of employment": 0.1073,
+   "Loan amount relative to purchase price": 0.0957,
+   "Repayment is high relative to income": 0.0793,
+   "Debt is high relative to credit": 0.0546,
+   "Share of past instalments paid late": 0.0488,
+   "Share of previous applications refused": 0.0441,
+   "Card balance is high relative to limit": 0.0439
+  }
+ },
+ "fairness": {
+  "gbm_bureau": {
+   "gender_all": {
+    "F": {
+     "n": 202448,
+     "approval_rate": 0.7260481703943729,
+     "approval_rate_good_borrowers": 0.7499070523375009,
+     "approval_rate_defaulters": 0.4090331686661962,
+     "default_rate_among_approved": 0.03943205861742875,
+     "approval_ratio_vs_M": 1.117330150780196,
+     "good_borrower_gap_vs_M": 0.06709700191590862
+    },
+    "M": {
+     "n": 105059,
+     "approval_rate": 0.6498062993175263,
+     "approval_rate_good_borrowers": 0.6828100504215923,
+     "approval_rate_defaulters": 0.3573908962928203,
+     "default_rate_among_approved": 0.05578016054373938,
+     "approval_ratio_vs_M": 1.0,
+     "good_borrower_gap_vs_M": 0.0
+    }
+   },
+   "age_all": {
+    "30-49": {
+     "n": 158930,
+     "approval_rate": 0.7159567105014787,
+     "approval_rate_good_borrowers": 0.7457225513156082,
+     "approval_rate_defaulters": 0.4016727272727273,
+     "default_rate_among_approved": 0.04853805795038098,
+     "approval_ratio_vs_30-49": 1.0,
+     "good_borrower_gap_vs_30-49": 0.0
+    },
+    "50+": {
+     "n": 103395,
+     "approval_rate": 0.7785869722907297,
+     "approval_rate_good_borrowers": 0.795375983424111,
+     "approval_rate_defaulters": 0.5013550135501355,
+     "default_rate_among_approved": 0.03676927281309781,
+     "approval_ratio_vs_30-49": 1.0874777215865228,
+     "good_borrower_gap_vs_30-49": 0.049653432108502815
+    },
+    "<30": {
+     "n": 45186,
+     "approval_rate": 0.4640596644978533,
+     "approval_rate_good_borrowers": 0.496013994751968,
+     "approval_rate_defaulters": 0.21678592148520595,
+     "default_rate_among_approved": 0.053459869330917065,
+     "approval_ratio_vs_30-49": 0.6481672113566912,
+     "good_borrower_gap_vs_30-49": -0.24970855656364016
+    }
+   },
+   "gender_thin_file": {
+    "F": {
+     "n": 27613,
+     "approval_rate": 0.7318292108789338,
+     "approval_rate_good_borrowers": 0.7537700376014249,
+     "approval_rate_defaulters": 0.4957410562180579,
+     "default_rate_among_approved": 0.05760095011876484,
+     "approval_ratio_vs_M": 1.1321065305384375,
+     "good_borrower_gap_vs_M": 0.07570317510317337
+    },
+    "M": {
+     "n": 16407,
+     "approval_rate": 0.6464314012311818,
+     "approval_rate_good_borrowers": 0.6780668624982515,
+     "approval_rate_defaulters": 0.4319582740635372,
+     "default_rate_among_approved": 0.08589477654158023,
+     "approval_ratio_vs_M": 1.0,
+     "good_borrower_gap_vs_M": 0.0
+    }
+   },
+   "age_thin_file": {
+    "30-49": {
+     "n": 20475,
+     "approval_rate": 0.7291819291819291,
+     "approval_rate_good_borrowers": 0.7599956123512313,
+     "approval_rate_defaulters": 0.4785905441570027,
+     "default_rate_among_approved": 0.07186872069658407,
+     "approval_ratio_vs_30-49": 1.0,
+     "good_borrower_gap_vs_30-49": 0.0
+    },
+    "50+": {
+     "n": 14493,
+     "approval_rate": 0.7626440350514041,
+     "approval_rate_good_borrowers": 0.77558001189768,
+     "approval_rate_defaulters": 0.5961722488038278,
+     "default_rate_among_approved": 0.05636478784040532,
+     "approval_ratio_vs_30-49": 1.0458899275068654,
+     "good_borrower_gap_vs_30-49": 0.015584399546448746
+    },
+    "<30": {
+     "n": 9052,
+     "approval_rate": 0.5336942112240389,
+     "approval_rate_good_borrowers": 0.5648312611012434,
+     "approval_rate_defaulters": 0.32393162393162395,
+     "default_rate_among_approved": 0.07845166632167253,
+     "approval_ratio_vs_30-49": 0.7319081697797855,
+     "good_borrower_gap_vs_30-49": -0.19516435124998788
+    }
+   }
+  },
+  "gbm_combined": {
+   "gender_all": {
+    "F": {
+     "n": 202448,
+     "approval_rate": 0.7305579704417925,
+     "approval_rate_good_borrowers": 0.7578421270674216,
+     "approval_rate_defaulters": 0.36803105151729004,
+     "default_rate_among_approved": 0.03526031102096011,
+     "approval_ratio_vs_M": 1.139492989735796,
+     "good_borrower_gap_vs_M": 0.0776696767475199
+    },
+    "M": {
+     "n": 105059,
+     "approval_rate": 0.6411254628351688,
+     "approval_rate_good_borrowers": 0.6801724503199017,
+     "approval_rate_defaulters": 0.29516658845612387,
+     "default_rate_among_approved": 0.04669220262485896,
+     "approval_ratio_vs_M": 1.0,
+     "good_borrower_gap_vs_M": 0.0
+    }
+   },
+   "age_all": {
+    "30-49": {
+     "n": 158930,
+     "approval_rate": 0.6929717485685521,
+     "approval_rate_good_borrowers": 0.7275726684116269,
+     "approval_rate_defaulters": 0.3276363636363636,
+     "default_rate_among_approved": 0.04090471607314726,
+     "approval_ratio_vs_30-49": 1.0,
+     "good_borrower_gap_vs_30-49": 0.0
+    },
+    "50+": {
+     "n": 103395,
+     "approval_rate": 0.8155036510469559,
+     "approval_rate_good_borrowers": 0.8345898595767814,
+     "approval_rate_defaulters": 0.5003387533875339,
+     "default_rate_among_approved": 0.03503362231525516,
+     "approval_ratio_vs_30-49": 1.1768209205231146,
+     "good_borrower_gap_vs_30-49": 0.10701719116515451
+    },
+    "<30": {
+     "n": 45186,
+     "approval_rate": 0.46043022175009957,
+     "approval_rate_good_borrowers": 0.4974134699487692,
+     "approval_rate_defaulters": 0.17424095919551344,
+     "default_rate_among_approved": 0.043306897380437394,
+     "approval_ratio_vs_30-49": 0.6644285610505687,
+     "good_borrower_gap_vs_30-49": -0.2301591984628577
+    }
+   },
+   "gender_thin_file": {
+    "F": {
+     "n": 27613,
+     "approval_rate": 0.7436352442690037,
+     "approval_rate_good_borrowers": 0.7737977439145063,
+     "approval_rate_defaulters": 0.4190800681431005,
+     "default_rate_among_approved": 0.04792052206097205,
+     "approval_ratio_vs_M": 1.1868505304203838,
+     "good_borrower_gap_vs_M": 0.10370402451319138
+    },
+    "M": {
+     "n": 16407,
+     "approval_rate": 0.6265618333638081,
+     "approval_rate_good_borrowers": 0.6700937194013149,
+     "approval_rate_defaulters": 0.3314366998577525,
+     "default_rate_among_approved": 0.06799610894941634,
+     "approval_ratio_vs_M": 1.0,
+     "good_borrower_gap_vs_M": 0.0
+    }
+   },
+   "age_thin_file": {
+    "30-49": {
+     "n": 20475,
+     "approval_rate": 0.69006105006105,
+     "approval_rate_good_borrowers": 0.7315307409641858,
+     "approval_rate_defaulters": 0.3528099910793934,
+     "default_rate_among_approved": 0.055984146082525305,
+     "approval_ratio_vs_30-49": 1.0,
+     "good_borrower_gap_vs_30-49": 0.0
+    },
+    "50+": {
+     "n": 14493,
+     "approval_rate": 0.831366866763265,
+     "approval_rate_good_borrowers": 0.8514277215942891,
+     "approval_rate_defaulters": 0.5732057416267943,
+     "default_rate_among_approved": 0.04971366918416466,
+     "approval_ratio_vs_30-49": 1.2047729207288451,
+     "good_borrower_gap_vs_30-49": 0.11989698063010334
+    },
+    "<30": {
+     "n": 9052,
+     "approval_rate": 0.5121520106053911,
+     "approval_rate_good_borrowers": 0.5510022836843441,
+     "approval_rate_defaulters": 0.2504273504273504,
+     "default_rate_among_approved": 0.06320103537532355,
+     "approval_ratio_vs_30-49": 0.742183623550526,
+     "good_borrower_gap_vs_30-49": -0.18052845727984168
+    }
+   }
+  }
+ },
+ "berka_robustness": {
+  "base_cashflow": {
+   "logit": {
+    "n": 682,
+    "default_rate": 0.11143695014662756,
+    "auc": 0.917708876150773,
+    "auc_ci95": [
+     0.8851259637677408,
+     0.9462821260364986
+    ],
+    "pr_auc": 0.7180496181771953,
+    "brier": 0.054565996363608024
+   },
+   "gbm": {
+    "n": 682,
+    "default_rate": 0.11143695014662756,
+    "auc": 0.931257599444155,
+    "auc_ci95": [
+     0.901007855219693,
+     0.9567439538134787
+    ],
+    "pr_auc": 0.7506270051572194,
+    "brier": 0.05077206565566066
+   }
+  },
+  "without_sanction_and_negative_balance": {
+   "logit": {
+    "n": 682,
+    "default_rate": 0.11143695014662756,
+    "auc": 0.9120852874761161,
+    "auc_ci95": [
+     0.8806833942471768,
+     0.9416649293021768
+    ],
+    "pr_auc": 0.6574080505505056,
+    "brier": 0.060339822355737587
+   },
+   "gbm": {
+    "n": 682,
+    "default_rate": 0.11143695014662756,
+    "auc": 0.9121070001737016,
+    "auc_ci95": [
+     0.881013604201158,
+     0.9436674110933757
+    ],
+    "pr_auc": 0.6492920088279202,
+    "brier": 0.0602670650136582
+   }
+  },
+  "gap_30_days_before_loan": {
+   "logit": {
+    "n": 682,
+    "default_rate": 0.11143695014662756,
+    "auc": 0.8950625325690463,
+    "auc_ci95": [
+     0.8566221809195952,
+     0.9293922371324193
+    ],
+    "pr_auc": 0.6509665767507494,
+    "brier": 0.0619584180384611
+   },
+   "gbm": {
+    "n": 682,
+    "default_rate": 0.11143695014662756,
+    "auc": 0.8942374500607956,
+    "auc_ci95": [
+     0.8595691816925676,
+     0.9269387462731528
+    ],
+    "pr_auc": 0.6576176332089972,
+    "brier": 0.061562438320728975
+   }
+  },
+  "finished_loans_only": {
+   "logit": {
+    "n": 234,
+    "default_rate": 0.13247863247863248,
+    "auc": 0.9071984744954711,
+    "auc_ci95": [
+     0.8521307592376451,
+     0.9518052164248163
+    ],
+    "pr_auc": 0.6260249525061182,
+    "brier": 0.07174174412467547
+   },
+   "gbm": {
+    "n": 234,
+    "default_rate": 0.13247863247863248,
+    "auc": 0.8863816939456538,
+    "auc_ci95": [
+     0.8052726626269859,
+     0.9505476574832006
+    ],
+    "pr_auc": 0.7008514684723065,
+    "brier": 0.06999470138796156
+   }
+  },
+  "terms_only_reference": {
+   "logit": {
+    "n": 682,
+    "default_rate": 0.11143695014662756,
+    "auc": 0.6494919228764982,
+    "auc_ci95": [
+     0.5793125545844648,
+     0.7120403619099073
+    ],
+    "pr_auc": 0.19698820355596003,
+    "brier": 0.09605900327221291
+   },
+   "gbm": {
+    "n": 682,
+    "default_rate": 0.11143695014662756,
+    "auc": 0.6648862254646517,
+    "auc_ci95": [
+     0.5981533073092417,
+     0.7274277749542091
+    ],
+    "pr_auc": 0.19248584250909884,
+    "brier": 0.09978488439827062
+   }
+  }
+ },
+ "berka_fairness_gender": {
+  "F": {
+   "n": 348,
+   "approval_rate": 0.6925287356321839,
+   "approval_rate_good_borrowers": 0.7752442996742671,
+   "approval_rate_defaulters": 0.07317073170731707,
+   "default_rate_among_approved": 0.012448132780082987,
+   "approval_ratio_vs_M": 0.9801042275472432,
+   "good_borrower_gap_vs_M": -0.007364395977906835
+  },
+  "M": {
+   "n": 334,
+   "approval_rate": 0.7065868263473054,
+   "approval_rate_good_borrowers": 0.782608695652174,
+   "approval_rate_defaulters": 0.05714285714285714,
+   "default_rate_among_approved": 0.00847457627118644,
+   "approval_ratio_vs_M": 1.0,
+   "good_borrower_gap_vs_M": 0.0
+  }
+ }
+}

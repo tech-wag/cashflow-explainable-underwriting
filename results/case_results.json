@@ -1,0 +1,287 @@
+{
+ "worked_example": {
+  "approval_cutoff_combined": 0.08418804934640953,
+  "approval_cutoff_bureau": 0.08868196511570109,
+  "declined_thin_file": {
+   "label": "Typical declined thin-file applicant",
+   "pd_combined": 0.146,
+   "pd_bureau_only": 0.128,
+   "decision_combined": "decline",
+   "decision_bureau_only": "decline",
+   "actual_outcome": "defaulted",
+   "base_log_odds": -2.847,
+   "top_drivers": [
+    {
+     "feature": "bur_ext_source_2",
+     "plain_language": "External credit score 2 is low",
+     "value_rounded": 0.36,
+     "contribution_log_odds": 0.279,
+     "direction": "raises risk"
+    },
+    {
+     "feature": "alt_prev_approved_share",
+     "plain_language": "Share of previous applications approved",
+     "value_rounded": 0.17,
+     "contribution_log_odds": 0.233,
+     "direction": "raises risk"
+    },
+    {
+     "feature": "alt_employment_years",
+     "plain_language": "Length of employment",
+     "value_rounded": 22.0,
+     "contribution_log_odds": -0.214,
+     "direction": "lowers risk"
+    },
+    {
+     "feature": "alt_inst_n",
+     "plain_language": "Number of past instalments",
+     "value_rounded": 52.0,
+     "contribution_log_odds": -0.155,
+     "direction": "lowers risk"
+    },
+    {
+     "feature": "alt_prev_refused_share",
+     "plain_language": "Share of previous applications refused",
+     "value_rounded": 0.39,
+     "contribution_log_odds": 0.133,
+     "direction": "raises risk"
+    },
+    {
+     "feature": "alt_credit_to_goods",
+     "plain_language": "Loan amount relative to purchase price",
+     "value_rounded": 1.0,
+     "contribution_log_odds": -0.111,
+     "direction": "lowers risk"
+    }
+   ],
+   "adverse_action_reasons": [
+    "External credit score 2 is low",
+    "Share of previous applications approved",
+    "Share of previous applications refused",
+    "Card balance is high relative to limit"
+   ],
+   "counterfactual": {
+    "changed_feature": "External credit score 2 is low",
+    "set_to_typical_value": 0.57,
+    "new_pd": 0.138,
+    "new_decision": "decline"
+   }
+  },
+  "n_thin_file_declined_by_bureau_approved_by_combined": 1200,
+  "n_of_those_who_repaid": 1134,
+  "n_thin_file_test": 8672,
+  "rescued_thin_file": {
+   "label": "Thin-file applicant declined on bureau data, approved with alternative data, repaid",
+   "pd_combined": 0.063,
+   "pd_bureau_only": 0.128,
+   "decision_combined": "approve",
+   "decision_bureau_only": "decline",
+   "actual_outcome": "repaid",
+   "base_log_odds": -2.847,
+   "top_drivers": [
+    {
+     "feature": "bur_ext_source_2",
+     "plain_language": "External credit score 2 is low",
+     "value_rounded": 0.36,
+     "contribution_log_odds": 0.298,
+     "direction": "raises risk"
+    },
+    {
+     "feature": "alt_employment_years",
+     "plain_language": "Length of employment",
+     "value_rounded": null,
+     "contribution_log_odds": -0.174,
+     "direction": "lowers risk"
+    },
+    {
+     "feature": "alt_annuity_to_income",
+     "plain_language": "Repayment is high relative to income",
+     "value_rounded": 0.36,
+     "contribution_log_odds": 0.162,
+     "direction": "raises risk"
+    },
+    {
+     "feature": "alt_income",
+     "plain_language": "Income level",
+     "value_rounded": 63000.0,
+     "contribution_log_odds": -0.112,
+     "direction": "lowers risk"
+    },
+    {
+     "feature": "bur_newest_years",
+     "plain_language": "Time since most recent credit account",
+     "value_rounded": null,
+     "contribution_log_odds": 0.091,
+     "direction": "raises risk"
+    },
+    {
+     "feature": "alt_income_type",
+     "plain_language": "Type of income",
+     "value_rounded": 3.0,
+     "contribution_log_odds": -0.079,
+     "direction": "lowers risk"
+    }
+   ],
+   "adverse_action_reasons": [
+    "External credit score 2 is low",
+    "Repayment is high relative to income",
+    "Time since most recent credit account",
+    "Debt is high relative to credit"
+   ],
+   "counterfactual": {
+    "changed_feature": "External credit score 2 is low",
+    "set_to_typical_value": 0.57,
+    "new_pd": 0.044,
+    "new_decision": "approve"
+   }
+  }
+ },
+ "berka_trajectories": {
+  "repaid": {
+   "months_before_loan": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ],
+   "balance_q25": [
+    27296.0,
+    26941.0,
+    28148.0,
+    25966.0,
+    26030.0,
+    26553.0,
+    26450.0,
+    24710.0,
+    24952.0,
+    25900.0,
+    25838.0,
+    27253.0
+   ],
+   "balance_median": [
+    38064.0,
+    37202.0,
+    37260.0,
+    35967.0,
+    36230.0,
+    37099.0,
+    37056.0,
+    36664.0,
+    36703.0,
+    37297.0,
+    35741.0,
+    37850.0
+   ],
+   "balance_q75": [
+    53851.0,
+    53164.0,
+    54514.0,
+    51086.0,
+    50039.0,
+    49942.0,
+    51247.0,
+    53092.0,
+    50868.0,
+    49810.0,
+    47982.0,
+    51626.0
+   ],
+   "inflow_median": [
+    23131.0,
+    22372.0,
+    23870.0,
+    22016.0,
+    22286.0,
+    22268.0,
+    22022.0,
+    21629.0,
+    22373.0,
+    21234.0,
+    21053.0,
+    22151.0
+   ],
+   "n_accounts": 606
+  },
+  "defaulted": {
+   "months_before_loan": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ],
+   "balance_q25": [
+    11268.0,
+    13418.0,
+    11698.0,
+    15206.0,
+    17124.0,
+    16656.0,
+    18890.0,
+    17768.0,
+    25043.0,
+    21608.0,
+    23620.0,
+    19994.0
+   ],
+   "balance_median": [
+    23928.0,
+    22403.0,
+    26139.0,
+    29456.0,
+    33656.0,
+    28397.0,
+    33772.0,
+    33901.0,
+    32804.0,
+    33036.0,
+    36168.0,
+    33524.0
+   ],
+   "balance_q75": [
+    34910.0,
+    33788.0,
+    46333.0,
+    50665.0,
+    43818.0,
+    41346.0,
+    47192.0,
+    53307.0,
+    47284.0,
+    55376.0,
+    53021.0,
+    43569.0
+   ],
+   "inflow_median": [
+    13814.0,
+    15536.0,
+    17095.0,
+    16850.0,
+    26078.0,
+    19630.0,
+    23024.0,
+    17276.0,
+    18664.0,
+    16597.0,
+    22090.0,
+    16278.0
+   ],
+   "n_accounts": 76
+  }
+ }
+}

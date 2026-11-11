@@ -1,0 +1,11 @@
+# Data must not be committed (Kaggle rules forbid redistribution)
+data/
+*.csv
+*.csv.gz
+*.parquet
+*.zip
+*.npz
+kaggle.json
+.ipynb_checkpoints/
+__pycache__/
+.DS_Store

@@ -1,0 +1,198 @@
+{
+ "home_credit": {
+  "n_applicants": 307511,
+  "default_rate": 0.0807,
+  "n_bureau_features": 14,
+  "n_alternative_features": 20,
+  "groups": {
+   "thin_file": {
+    "n": 44020,
+    "share": 0.1431,
+    "default_rate": 0.1012,
+    "ext_source_missing_share": {
+     "bur_ext_source_1": 0.608,
+     "bur_ext_source_2": 0.0032,
+     "bur_ext_source_3": 0.9695
+    },
+    "has_previous_loans_share": 0.9439,
+    "has_instalment_history_share": 0.9459
+   },
+   "with_bureau": {
+    "n": 263491,
+    "share": 0.8569,
+    "default_rate": 0.0773,
+    "ext_source_missing_share": {
+     "bur_ext_source_1": 0.5564,
+     "bur_ext_source_2": 0.002,
+     "bur_ext_source_3": 0.0694
+    },
+    "has_previous_loans_share": 0.9469,
+    "has_instalment_history_share": 0.9488
+   }
+  },
+  "by_gender": {
+   "size": {
+    "F": 202448,
+    "M": 105059
+   },
+   "mean": {
+    "F": 0.07,
+    "M": 0.1014
+   }
+  },
+  "by_age_band": {
+   "size": {
+    "30-49": 158930,
+    "50+": 103395,
+    "<30": 45186
+   },
+   "mean": {
+    "30-49": 0.0865,
+    "50+": 0.0571,
+    "<30": 0.1144
+   }
+  },
+  "missing_share_top10": {
+   "alt_cc_util_mean": 0.7202,
+   "alt_cc_dpd_share": 0.7174,
+   "bur_late_month_share": 0.7001,
+   "bur_ext_source_1": 0.5638,
+   "bur_ext_source_3": 0.1983,
+   "alt_employment_years": 0.1801,
+   "bur_debt_to_credit": 0.1467,
+   "bur_n_prolonged": 0.1431,
+   "bur_total_credit": 0.1431,
+   "bur_oldest_years": 0.1431
+  }
+ },
+ "berka": {
+  "n_loans": 682,
+  "n_defaults": 76,
+  "default_rate": 0.1114,
+  "status_counts": {
+   "C": 403,
+   "A": 203,
+   "D": 45,
+   "B": 31
+  },
+  "loans_with_90d_history": 682,
+  "n_cashflow_features": 16,
+  "by_gender": {
+   "size": {
+    "F": 348,
+    "M": 334
+   },
+   "mean": {
+    "F": 0.1178,
+    "M": 0.1048
+   }
+  },
+  "cashflow_feature_means_by_outcome": {
+   "cf_months_observed": {
+    "0": 11.026,
+    "1": 10.382
+   },
+   "cf_inflow_monthly_mean": {
+    "0": 27528.752,
+    "1": 25815.396
+   },
+   "cf_inflow_cv": {
+    "0": 0.576,
+    "1": 0.875
+   },
+   "cf_expense_to_income": {
+    "0": 0.887,
+    "1": 0.874
+   },
+   "cf_months_net_negative": {
+    "0": 0.397,
+    "1": 0.436
+   },
+   "cf_min_balance": {
+    "0": 9609.53,
+    "1": 518.211
+   },
+   "cf_balance_mean": {
+    "0": 44450.877,
+    "1": 36890.47
+   },
+   "cf_balance_volatility": {
+    "0": 0.382,
+    "1": 0.581
+   },
+   "cf_low_balance_share": {
+    "0": 0.016,
+    "1": 0.082
+   },
+   "cf_negative_balance_share": {
+    "0": 0.0,
+    "1": 0.022
+   },
+   "cf_sanction_count": {
+    "0": 0.023,
+    "1": 0.855
+   },
+   "cf_cash_withdrawal_share": {
+    "0": 0.848,
+    "1": 0.948
+   },
+   "cf_txn_per_month": {
+    "0": 5.855,
+    "1": 5.36
+   },
+   "cf_history_days": {
+    "0": 309.809,
+    "1": 289.184
+   },
+   "cf_account_tenure_years": {
+    "0": 1.102,
+    "1": 0.995
+   },
+   "cf_payment_to_income": {
+    "0": 0.174,
+    "1": 0.318
+   }
+  }
+ },
+ "berka_columns": {
+  "loan": [
+   "loan_id",
+   "account_id",
+   "date",
+   "amount",
+   "duration",
+   "payments",
+   "status"
+  ],
+  "account": [
+   "account_id",
+   "district_id",
+   "frequency",
+   "date"
+  ],
+  "trans": [
+   "trans_id",
+   "account_id",
+   "date",
+   "type",
+   "operation",
+   "amount",
+   "balance",
+   "k_symbol",
+   "bank",
+   "account"
+  ],
+  "disp": [
+   "disp_id",
+   "client_id",
+   "account_id",
+   "type"
+  ],
+  "client": [
+   "client_id",
+   "gender",
+   "birth_date",
+   "district_id"
+  ]
+ }
+}
