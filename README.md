@@ -39,6 +39,7 @@ The notebooks are written for Google Colab and save their outputs to a `cfeu_jou
 2. **`notebooks/02_models_evaluation.ipynb`** compares bureau, alternative and combined features with logistic regression and LightGBM, using repeated cross-validation, bootstrap confidence intervals, calibration and DeLong tests. About 30–45 minutes.
 3. **`notebooks/03_explain_fairness_robustness.ipynb`** tests reason stability and faithfulness, fairness by gender and age, and the Berka robustness checks. About 20–30 minutes.
 4. **`notebooks/04_worked_example.ipynb`** traces individual applicants through all five stages and computes the Berka account trajectories. About 10 minutes.
+5. **`notebooks/05_robustness_extensions.ipynb`** runs nested cross-validation with hyperparameter search, overfitting checks on Berka (permutation test, learning curve, out-of-time test, shorter transaction windows), class-imbalance treatments (class weights, focal loss, undersampling, SMOTE), models without the undocumented external scores, and fairness mitigations for the age gap. About 75–100 minutes; each section saves to Drive as it finishes, so a disconnected run can resume.
 
 Each notebook downloads a small JSON file of summary results. The versions used in the paper are in `results/`.
 
@@ -57,7 +58,7 @@ from cfeu.models import run_suite, headline_table
 ## Repository layout
 
 ```
-notebooks/   four Colab notebooks, run in order
+notebooks/   five Colab notebooks, run in order
 src/cfeu/    feature building, models and evaluation, explanations and fairness, worked examples
 results/     summary results used in the paper (counts, rates and metrics only)
 figures/     figures in the paper
