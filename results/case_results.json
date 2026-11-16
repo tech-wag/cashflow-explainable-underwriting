@@ -70,6 +70,8 @@
   "n_thin_file_declined_by_bureau_approved_by_combined": 1200,
   "n_of_those_who_repaid": 1134,
   "n_thin_file_test": 8672,
+  "n_thin_file_approved_by_bureau_declined_by_combined": 757,
+  "n_of_those_who_defaulted": 106,
   "rescued_thin_file": {
    "label": "Thin-file applicant declined on bureau data, approved with alternative data, repaid",
    "pd_combined": 0.063,
